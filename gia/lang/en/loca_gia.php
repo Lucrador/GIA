@@ -1,4 +1,5 @@
 <?php
+
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -14,19 +15,14 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
 /**
- * 
  *
- * @package    local
+ *
+ * @package   local
  * @subpackage gia
- * @copyright  2015
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @copyright 2015
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-//Pertenece al plugin Curso Usuario
- 
- 
-defined('MOODLE_INTERNAL') || die();
-$plugin->pluginname = "local_gia";
-$plugin->component = 'local_gia';
-$plugin->version   = '2015051810';
+
+$string['gia:viewstudent'] = 'Student View';
+$string['gia:viewadmin'] = 'Admin View';

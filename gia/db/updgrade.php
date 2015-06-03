@@ -31,22 +31,21 @@
  * Please do not forget to use upgrade_set_timeout()
  * before any action that may take longer time to finish.
  *
- * @since 1.0
  * @package gia
- * @copyright 
+ * @copyright 2015
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  *
  * @param int $oldversion
- * @param object $block
  */
 
-function xmldb_local_GIA_upgrade($oldversion) {
+
+function xmldb_local_cursousuario_upgrade($oldversion) {
 	global $CFG, $DB;
 
-	$dbman = $DB->get_manager();
-		
 	return true;
-	}
+}
+
+   

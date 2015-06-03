@@ -1,22 +1,24 @@
 <?php
 $capabilities = array(
 
-    'local/GIA:viewuser' => array(
-    	// Capability type (write, read, etc.)
+    'local/gia:viewstudent' => array(
         'captype' => 'read',
-        // Context in which the capability can be set (course, category, etc.)
-        'contextlevel' => CONTEXT_SYSTEM,
-        // Default values for different roles (only teachers and managers can modify)
-        'legacy' => array(
-            'teacher' => CAP_ALLOW,
-            'editingteacher' => CAP_ALLOW,
-            'manager' => CAP_ALLOW,
-			'student'=>CAP_ALLOW,
-            )),
-
-	
+        'contextlevel' => CONTEXT_COURSE,
+        'archetypes' => array(
+        	'student'=> CAP_ALLOW,
+        	'teacher' => CAP_PROHIBIT,
+            'editingteacher' => CAP_PROHIBIT,
+            'manager' => CAP_PROHIBIT
+            )),	
 		
-
-		
+	'local/gia:viewadmin' => array(
+			'captype' => 'read',
+			'contextlevel' => CONTEXT_COURSE,
+			'archetypes' => array(
+					'teacher' => CAP_ALLOW,
+					'editingteacher' => CAP_ALLOW,
+					'manager' => CAP_ALLOW,
+					'student'=> CAP_PROHIBIT
+			))
 );
 ?>	
